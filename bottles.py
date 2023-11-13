@@ -1,60 +1,61 @@
 class Bottles:
-  def song(self):
-    return self.verses(99, 0)
+    def song(self):
+        return self.verses(99, 0)
 
-  def verses(self, finish, start):
-    return '\n'.join(self.verse(verse_number) for verse_number in range(finish, start - 1, -1))
+    def verses(self, bottles_at_start, bottles_at_end):
+        return '\n'.join(self.verse(bottles) for bottles in range(bottles_at_start, bottles_at_end - 1, -1))
 
-  def verse(self, number):
-    return self.verse_for(number).text()
+    def verse(self, bottles):
+        return Round(bottles).to_string()
 
-  def verse_for(self, number):
-    def no_more(verse):
-      return (
-        'No more bottles of beer on the wall, '
-        'no more bottles of beer.\n'
-        'Go to the store and buy some more, '
-        '99 bottles of beer on the wall.\n'
-      )
 
-    def last_one(verse):
-      return (
-        '1 bottle of beer on the wall, '
-        '1 bottle of beer.\n'
-        'Take it down and pass it around, '
-        'no more bottles of beer on the wall.\n'
-      )
+class Round:
+    def __init__(self, bottles):
+        self.bottles = bottles
 
-    def penultimate(verse):
-      return (
-        '2 bottles of beer on the wall, '
-        '2 bottles of beer.\n'
-        'Take one down and pass it around, '
-        '1 bottle of beer on the wall.\n'
-      )
+    def to_string(self):
+        return self.challenge() + self.response()
 
-    def default(verse):
-      return (
-        f'{verse.number} bottles of beer on the wall, '
-        f'{verse.number} bottles of beer.\n'
-        f'Take one down and pass it around, '
-        f'{verse.number - 1} bottles of beer on the wall.\n'
-      )
+    def challenge(self):
+        return f'{self.bottles_of_beer().capitalize()} {self.on_wall()}, {self.bottles_of_beer()}.\n'
 
-    lyric_functions = [no_more, last_one, penultimate, default]
-    chosen_lyric = (
-      lyric_functions[0] if number == 0 else
-      lyric_functions[1] if number == 1 else
-      lyric_functions[2] if number == 2 else
-      lyric_functions[3]
-    )
+    def response(self):
+        return f'{self.go_to_the_store_or_take_one_down()}, {self.bottles_of_beer()} {self.on_wall()}.\n'
 
-    return Verse(number, chosen_lyric)
+    def bottles_of_beer(self):
+        return f'{self.anglicized_bottle_count()} {self.pluralized_bottle_form()} of {self.beer()}'
 
-class Verse:
-  def __init__(self, number, lyrics):
-    self.number = number
-    self.lyrics = lyrics
+    def beer(self):
+        return 'beer'
 
-  def text(self):
-    return self.lyrics(self)
+    def on_wall(self):
+        return 'on the wall'
+
+    def pluralized_bottle_form(self):
+        return 'bottle' if self.last_beer() else 'bottles'
+
+    def anglicized_bottle_count(self):
+        return 'no more' if self.all_out() else str(self.bottles)
+
+    def go_to_the_store_or_take_one_down(self):
+        if self.all_out():
+            self.bottles = 99
+            return self.buy_new_beer()
+        lyrics = self.drink_beer()
+        self.bottles -= 1
+        return lyrics
+
+    def buy_new_beer(self):
+        return 'Go to the store and buy some more'
+
+    def drink_beer(self):
+        return f'Take {self.it_or_one()} down and pass it around'
+
+    def it_or_one(self):
+        return 'it' if self.last_beer() else 'one'
+
+    def all_out(self):
+        return self.bottles == 0
+
+    def last_beer(self):
+        return self.bottles == 1
