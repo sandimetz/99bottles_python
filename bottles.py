@@ -1,3 +1,3 @@
 class Bottles:
-  def verse(self):
+  def verse(self, _):
     pass
