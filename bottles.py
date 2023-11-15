@@ -1,15 +1,13 @@
 class Bottles:
   def verse(self, number):
     if (number == 99):
-      return (
-        '99 bottles of beer on the wall, '
-        '99 bottles of beer.\n'
-        'Take one down and pass it around, '
-        '98 bottles of beer on the wall.\n'
-      )
+      n = 99
+    else:
+      n = 3
+
     return (
-      '3 bottles of beer on the wall, '
-      '3 bottles of beer.\n'
-      'Take one down and pass it around, '
-      '2 bottles of beer on the wall.\n'
+      f'{n} bottles of beer on the wall, '
+      f'{n} bottles of beer.\n'
+      f'Take one down and pass it around, '
+      f'{n-1} bottles of beer on the wall.\n'
     )
