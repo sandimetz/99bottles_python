@@ -1,16 +1,6 @@
 class Bottles:
   def verses(self, _a, _b):
-    return (
-      '99 bottles of beer on the wall, '
-      '99 bottles of beer.\n'
-      'Take one down and pass it around, '
-      '98 bottles of beer on the wall.\n'
-      '\n'
-      '98 bottles of beer on the wall, '
-      '98 bottles of beer.\n'
-      'Take one down and pass it around, '
-      '97 bottles of beer on the wall.\n'
-    )
+    return f'{self.verse(99)}\n{self.verse(98)}'
 
   def verse(self, number):
     match number:
