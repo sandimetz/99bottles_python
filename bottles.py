@@ -1,4 +1,7 @@
 class Bottles:
+  def song(self):
+    return self.verses(99, 0)
+
   def verses(self, upper, lower):
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
