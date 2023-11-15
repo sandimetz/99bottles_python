@@ -1,6 +1,8 @@
 class Bottles:
-  def verses(self, _a, _b):
-    return f'{self.verse(99)}\n{self.verse(98)}'
+  def verses(self, upper, lower):
+    if (upper == 99):
+      return f'{self.verse(99)}\n{self.verse(98)}'
+    return f'{self.verse(2)}\n{self.verse(1)}\n{self.verse(0)}'
 
   def verse(self, number):
     match number:
