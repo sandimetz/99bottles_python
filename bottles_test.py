@@ -29,3 +29,12 @@ class BottlesTest(unittest.TestCase):
       '1 bottle of beer on the wall.\n'
     )
     self.assertEqual(Bottles().verse(2), expected)
+
+  def test_verse_1(self):
+    expected = (
+      '1 bottle of beer on the wall, '
+      '1 bottle of beer.\n'
+      'Take it down and pass it around, '
+      'no more bottles of beer on the wall.\n'
+    )
+    self.assertEqual(Bottles().verse(1), expected)
