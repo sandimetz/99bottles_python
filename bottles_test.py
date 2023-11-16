@@ -84,3 +84,8 @@ def test_a_few_verses():
     '99 bottles of beer on the wall.\n'
   )
   assert Bottles().verses(2, 0) == expected
+
+
+def test_the_whole_song():
+  bottles = Bottles()
+  assert bottles.song() == bottles.verses(99, 0)
