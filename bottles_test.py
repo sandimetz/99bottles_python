@@ -83,4 +83,5 @@ class BottlesTest(unittest.TestCase):
 
   def test_the_whole_song(self):
     bottles = Bottles()
-    self.assertEqual(bottles.verses(99, 0), bottles.song())
+    expected = '\n'.join(bottles.verse(i) for i in range(99, -1, -1))
+    self.assertEqual(expected, bottles.song())
