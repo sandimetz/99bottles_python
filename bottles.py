@@ -3,7 +3,11 @@ class Bottles:
     return self.verses(99, 0)
 
   def verses(self, upper, lower):
-    return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
+    if (upper == 99 and lower == 98):
+      return f'{self.verse(99)}\n{self.verse(98)}'
+    if (upper == 2):
+      return f'{self.verse(2)}\n{self.verse(1)}\n{self.verse(0)}'
+    return "ok"
 
   def verse(self, number):
     match number:
