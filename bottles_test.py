@@ -88,4 +88,5 @@ def test_a_few_verses():
 
 def test_the_whole_song():
   bottles = Bottles()
-  assert bottles.song() == bottles.verses(99, 0)
+  expected = '\n'.join(bottles.verse(i) for i in range(99, -1, -1))
+  assert bottles.song() == expected
