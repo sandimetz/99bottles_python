@@ -80,3 +80,7 @@ class BottlesTest(unittest.TestCase):
       '99 bottles of beer on the wall.\n'
     )
     self.assertEqual(Bottles().verses(2, 0), expected)
+
+  def test_the_whole_song(self):
+    bottles = Bottles()
+    self.assertEqual(bottles.verses(99, 0), bottles.song())
