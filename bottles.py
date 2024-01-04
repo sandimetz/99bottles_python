@@ -45,3 +45,6 @@ class Bottles:
     if number == 1:
       return 'it'
     return 'one'
+
+  def successor(self, number):
+    return number - 1
