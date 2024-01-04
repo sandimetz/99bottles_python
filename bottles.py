@@ -22,7 +22,7 @@ class Bottles:
             ' of beer on the wall, '
           f'{self.quantity(number)} {self.container(number)} of beer.\n'
           f'{self.action(number)}, '
-          f'{self.quantity(number-1)} {self.container(number-1)}'
+          f'{self.quantity(self.successor(number))} {self.container(number-1)}'
             ' of beer on the wall.\n'
         )
 
