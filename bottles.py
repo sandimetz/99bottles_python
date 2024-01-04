@@ -36,7 +36,7 @@ class Bottles:
           f'{number-1} {self.container(number-1)} of beer on the wall.\n'
         )
 
-  def container(self, number='FIXME'):
+  def container(self, number):
     if number == 1:
       return 'bottle'
     return 'bottles'
