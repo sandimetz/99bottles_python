@@ -29,6 +29,9 @@ class Bottles:
           f'{number-1} {self.container(number-1)} of beer on the wall.\n'
         )
 
+  def quantity(self):
+    pass
+
   def container(self, number):
     if number == 1:
       return 'bottle'
