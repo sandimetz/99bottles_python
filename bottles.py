@@ -35,3 +35,6 @@ class Bottles:
           f'Take one down and pass it around, '
           f'{number-1} bottles of beer on the wall.\n'
         )
+
+  def container(self):
+    pass
