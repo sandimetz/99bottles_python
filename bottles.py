@@ -6,6 +6,15 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
+    return (
+      f'{self.quantity(number).capitalize()} {self.container(number)}'
+      ' of beer on the wall, '
+      f'{self.quantity(number)} {self.container(number)} of beer.\n'
+      f'{self.action(number)}, '
+      f'{self.quantity(self.successor(number))} '
+      f'{self.container(self.successor(number))}'
+      ' of beer on the wall.\n'
+    )
     match number:
       case 0:
         return (
