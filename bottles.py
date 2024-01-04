@@ -37,4 +37,4 @@ class Bottles:
         )
 
   def container(self):
-    pass
+    return 'bottles'
