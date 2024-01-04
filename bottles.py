@@ -12,7 +12,7 @@ class Bottles:
           f'{self.quantity(number).capitalize()} {self.container(number)}'
           ' of beer on the wall, '
           f'{self.quantity(number)} {self.container(number)} of beer.\n'
-          f'Go to the store and buy some more, '
+          f'{self.action(number)}, '
           f'99 bottles of beer on the wall.\n'
         )
       case _:
@@ -20,7 +20,7 @@ class Bottles:
           f'{str(self.quantity(number)).capitalize()} {self.container(number)}'
           ' of beer on the wall, '
           f'{self.quantity(number)} {self.container(number)} of beer.\n'
-          f'Take {self.pronoun(number)} down and pass it around, '
+          f'{self.action(number)}, '
           f'{self.quantity(number-1)} {self.container(number-1)}'
           ' of beer on the wall.\n'
         )
