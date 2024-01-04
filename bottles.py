@@ -28,7 +28,7 @@ class Bottles:
   def quantity(self, number):
     if number == 0:
       return 'no more'
-    return number
+    return str(number)
 
   def container(self, number):
     if number == 1:
