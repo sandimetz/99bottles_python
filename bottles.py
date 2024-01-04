@@ -30,7 +30,7 @@ class Bottles:
           ' of beer on the wall.\n'
         )
 
-  def quantity(self, number=0):
+  def quantity(self, number):
     if number == 0:
       return 'no more'
     return number
