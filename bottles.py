@@ -25,7 +25,7 @@ class Bottles:
         return (
           f'{number} {self.container(number)} of beer on the wall, '
           f'{number} {self.container(number)} of beer.\n'
-          f'Take {self.pronoun()} down and pass it around, '
+          f'Take {self.pronoun(number)} down and pass it around, '
           f'{number-1} {self.container(number-1)} of beer on the wall.\n'
         )
 
