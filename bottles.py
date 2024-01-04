@@ -13,7 +13,7 @@ class Bottles:
             ' of beer on the wall, '
           f'{self.quantity(number)} {self.container(number)} of beer.\n'
           f'{self.action(number)}, '
-          f'99 bottles of beer on the wall.\n'
+          f'{self.quantity(99)} bottles of beer on the wall.\n'
         )
       case _:
         return (
