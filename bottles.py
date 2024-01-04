@@ -37,4 +37,6 @@ class Bottles:
         )
 
   def container(self, number='FIXME'):
+    if number == 1:
+      return 'bottle'
     return 'bottles'
