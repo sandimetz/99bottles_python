@@ -29,7 +29,7 @@ class Bottles:
           f'{number-1} {self.container(number-1)} of beer on the wall.\n'
         )
 
-  def quantity(self):
+  def quantity(self, number='FIXME'):
     return 'no more'
 
   def container(self, number):
