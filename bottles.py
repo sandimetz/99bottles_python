@@ -34,5 +34,5 @@ class Bottles:
       return 'bottle'
     return 'bottles'
 
-  def pronoun(self):
+  def pronoun(self, number='FIXME'):
     return 'one'
