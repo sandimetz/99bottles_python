@@ -13,7 +13,7 @@ class Bottles:
           ' of beer on the wall, '
           f'{self.quantity(number)} {self.container(number)} of beer.\n'
           f'{self.action(number)}, '
-          f'99 bottles of beer on the wall.\n'
+          f'{self.quantity(number-1)} bottles of beer on the wall.\n'
         )
       case _:
         return (
@@ -26,9 +26,13 @@ class Bottles:
         )
 
   def quantity(self, number):
-    if number == 0:
-      return 'no more'
-    return str(number)
+    match number:
+      case -1:
+        return "99"
+      case 0:
+        return 'no more'
+      case _:
+        return str(number)
 
   def container(self, number):
     if number == 1:
