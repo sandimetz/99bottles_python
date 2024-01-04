@@ -33,3 +33,6 @@ class Bottles:
     if number == 1:
       return 'bottle'
     return 'bottles'
+
+  def pronoun(self):
+    pass
