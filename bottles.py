@@ -30,7 +30,7 @@ class Bottles:
         )
 
   def quantity(self):
-    pass
+    return 'no more'
 
   def container(self, number):
     if number == 1:
