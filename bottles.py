@@ -16,14 +16,14 @@ class Bottles:
         )
       case 1:
         return (
-          f'{number} bottle of beer on the wall, '
+          f'{number} {self.container(number)} of beer on the wall, '
           f'1 bottle of beer.\n'
           f'Take it down and pass it around, '
           f'no more bottles of beer on the wall.\n'
         )
       case _:
         return (
-          f'{number} bottles of beer on the wall, '
+          f'{number} {self.container(number)} of beer on the wall, '
           f'{number} bottles of beer.\n'
           f'Take one down and pass it around, '
           f'{number-1} {self.container(number-1)} of beer on the wall.\n'
