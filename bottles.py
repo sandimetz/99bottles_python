@@ -9,7 +9,7 @@ class Bottles:
     match number:
       case 0:
         return (
-          f'{str(self.quantity(number)).capitalize()} bottles'
+          f'{self.quantity(number).capitalize()} bottles'
           ' of beer on the wall, '
           f'no more bottles of beer.\n'
           f'Go to the store and buy some more, '
