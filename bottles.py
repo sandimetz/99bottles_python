@@ -42,7 +42,7 @@ class BottleNumber:
     return str(self._number)
 
   def container(self, number):
-    if number == 1:
+    if self._number == 1:
       return 'bottle'
     return 'bottles'
 
