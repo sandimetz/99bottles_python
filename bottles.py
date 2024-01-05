@@ -25,7 +25,7 @@ class Bottles:
     return BottleNumber(number).action(number)
 
   def pronoun(self, number):
-    BottleNumber(number).pronoun(number)
+    return BottleNumber(number).pronoun(number)
     if number == 1:
       return 'it'
     return 'one'
