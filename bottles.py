@@ -20,9 +20,6 @@ class Bottles:
 
   def container(self, number):
     return BottleNumber(number).container(number)
-    if number == 1:
-      return 'bottle'
-    return 'bottles'
 
   def action(self, number):
     if number == 0:
