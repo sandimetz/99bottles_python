@@ -23,6 +23,7 @@ class Bottles:
     return BottleNumber(number).container(number)
 
   def action(self, number):
+    BottleNumber(number).action(number)
     if number == 0:
       return 'Go to the store and buy some more'
     return f'Take {self.pronoun(number)} down and pass it around'
