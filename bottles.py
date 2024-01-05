@@ -41,7 +41,7 @@ class BottleNumber:
       return 'no more'
     return str(self._number)
 
-  def container(self, number):
+  def container(self, number='FIXME'):
     if self._number == 1:
       return 'bottle'
     return 'bottles'
