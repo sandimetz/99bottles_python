@@ -20,6 +20,7 @@ class Bottles:
     return BottleNumber(number).quantity(number)
 
   def container(self, number):
+    BottleNumber(number).container(number)
     if number == 1:
       return 'bottle'
     return 'bottles'
