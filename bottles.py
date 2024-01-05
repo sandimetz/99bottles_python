@@ -26,7 +26,7 @@ class Bottles:
     return BottleNumber(number).action()
 
   def pronoun(self, number):
-    return BottleNumber(number).pronoun(number)
+    return BottleNumber(number).pronoun()
 
   def successor(self, number):
     return BottleNumber(number).successor(number)
