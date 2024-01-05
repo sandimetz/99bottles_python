@@ -19,7 +19,7 @@ class Bottles:
     return BottleNumber(number).quantity()
 
   def container(self, number):
-    return BottleNumber(number).container(number)
+    return BottleNumber(number).container()
 
   def action(self, number):
     return BottleNumber(number).action(number)
