@@ -23,7 +23,7 @@ class Bottles:
     return BottleNumber(number).container()
 
   def action(self, number):
-    return BottleNumber(number).action(number)
+    return BottleNumber(number).action()
 
   def pronoun(self, number):
     return BottleNumber(number).pronoun(number)
