@@ -6,6 +6,8 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in range(upper, lower-1, -1))
 
   def verse(self, number):
+    bottle_number = BottleNumber(number)
+
     return (
       f'{self.quantity(number).capitalize()} {self.container(number)}'
         ' of beer on the wall, '
