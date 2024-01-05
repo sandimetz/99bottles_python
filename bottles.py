@@ -25,9 +25,6 @@ class Bottles:
   def action(self, number):
     return BottleNumber(number).action()
 
-  def pronoun(self, number):
-    return BottleNumber(number).pronoun()
-
   def successor(self, number):
     return BottleNumber(number).successor(number)
 
@@ -49,7 +46,7 @@ class BottleNumber:
   def action(self):
     if self._number == 0:
       return 'Go to the store and buy some more'
-    return f'Take {self.pronoun(self._number)} down and pass it around'
+    return f'Take {self.pronoun()} down and pass it around'
 
   def pronoun(self, number='FIXME'):
     if self._number == 1:
