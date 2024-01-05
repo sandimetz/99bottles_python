@@ -17,7 +17,7 @@ class Bottles:
     )
 
   def quantity(self, number):
-    return BottleNumber(number).quantity(number)
+    return BottleNumber(number).quantity()
 
   def container(self, number):
     return BottleNumber(number).container(number)
