@@ -41,6 +41,9 @@ class Bottles:
     return number - 1
 
 class BottleNumber:
+  def __init__(self, number):
+    self.number = number
+
   def quantity(self, number):
     if number == 0:
       return 'no more'
