@@ -29,7 +29,7 @@ class Bottles:
     return BottleNumber(number).pronoun(number)
 
   def successor(self, number):
-    BottleNumber(number).successor(number)
+    return BottleNumber(number).successor(number)
     if number == 0:
       return 99
     return number - 1
