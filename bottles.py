@@ -39,3 +39,6 @@ class Bottles:
     if number == 0:
       return 99
     return number - 1
+
+class BottleNumber:
+  pass
