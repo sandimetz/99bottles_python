@@ -52,7 +52,7 @@ class BottleNumber:
     return f'Take {self.pronoun(self._number)} down and pass it around'
 
   def pronoun(self, number):
-    if number == 1:
+    if self._number == 1:
       return 'it'
     return 'one'
 
