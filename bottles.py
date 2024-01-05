@@ -26,7 +26,7 @@ class Bottles:
     return BottleNumber(number).action()
 
   def successor(self, number):
-    return BottleNumber(number).successor(number)
+    return BottleNumber(number).successor()
 
 
 class BottleNumber:
