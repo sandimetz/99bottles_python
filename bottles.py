@@ -34,7 +34,7 @@ class BottleNumber:
   def __init__(self, number):
     self.number = number
 
-  def quantity(self, number='FIXME'):
+  def quantity(self):
     if self.number == 0:
       return 'no more'
     return str(self.number)
