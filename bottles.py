@@ -51,7 +51,7 @@ class BottleNumber:
       return 'it'
     return 'one'
 
-  def successor(self, number='FIXME'):
+  def successor(self):
     if self.number == 0:
       return 99
     return self.number - 1
