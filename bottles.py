@@ -47,9 +47,9 @@ class BottleNumber:
     return 'bottles'
 
   def action(self, number):
-    if number == 0:
+    if self._number == 0:
       return 'Go to the store and buy some more'
-    return f'Take {self.pronoun(number)} down and pass it around'
+    return f'Take {self.pronoun(self._number)} down and pass it around'
 
   def pronoun(self, number):
     if number == 1:
