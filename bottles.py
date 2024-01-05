@@ -30,9 +30,6 @@ class Bottles:
 
   def successor(self, number):
     return BottleNumber(number).successor(number)
-    if number == 0:
-      return 99
-    return number - 1
 
 
 class BottleNumber:
