@@ -46,7 +46,7 @@ class BottleNumber:
         return 'Go to the store and buy some more'
     return f'Take {self.pronoun()} down and pass it around'
 
-  def pronoun(self, number='FIXME'):
+  def pronoun(self):
     if self.number == 1:
       return 'it'
     return 'one'
