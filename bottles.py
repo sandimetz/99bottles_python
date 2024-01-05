@@ -26,9 +26,6 @@ class Bottles:
 
   def pronoun(self, number):
     return BottleNumber(number).pronoun(number)
-    if number == 1:
-      return 'it'
-    return 'one'
 
   def successor(self, number):
     if number == 0:
