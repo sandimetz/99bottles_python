@@ -43,4 +43,27 @@ class Bottles:
 
 
 class BottleNumber:
-  pass
+  def quantity(self, number):
+    if number == 0:
+      return 'no more'
+    return str(number)
+
+  def container(self, number):
+    if number == 1:
+      return 'bottle'
+    return 'bottles'
+
+  def action(self, number):
+    if number == 0:
+        return 'Go to the store and buy some more'
+    return f'Take {self.pronoun(number)} down and pass it around'
+
+  def pronoun(self, number):
+    if number == 1:
+      return 'it'
+    return 'one'
+
+  def successor(self, number):
+    if number == 0:
+      return 99
+    return number - 1
