@@ -61,4 +61,7 @@ class BottleNumber0(BottleNumber):
     return 99
 
 class BottleNumber1(BottleNumber):
-  pass
+  def container(self):
+    if self.number == 1:
+      return 'bottle'
+    return 'bottles'
