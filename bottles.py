@@ -48,3 +48,7 @@ class BottleNumber:
     if self._number == 0:
       return 99
     return self._number - 1
+
+
+class BottleNumber0(BottleNumber):
+  pass
