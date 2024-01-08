@@ -32,8 +32,6 @@ class BottleNumber:
     return f'{self.quantity()} {self.container()}'
 
   def quantity(self):
-    if self.number == 0:
-      return 'no more'
     return str(self.number)
 
   def container(self):
