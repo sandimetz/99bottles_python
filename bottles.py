@@ -29,6 +29,17 @@ class Bottles:
     return cls(number)
 
 class BottleNumber:
+  @staticmethod
+  def given(number):
+    match number:
+      case 0:
+        cls = BottleNumber0
+      case 1:
+        cls = BottleNumber1
+      case _:
+        cls = BottleNumber
+    return cls(number)
+
   def __init__(self, number):
     self.number = number
 
