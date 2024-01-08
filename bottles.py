@@ -18,6 +18,15 @@ class Bottles:
 
   @staticmethod
   def bottle_number_given(number):
+    match number:
+      case 0:
+        cls = BottleNumber0
+      case 1:
+        cls = BottleNumber1
+      case _:
+        cls = BottleNumber
+    cls(number)
+
     if number == 0:
       cls = BottleNumber0
     else:
