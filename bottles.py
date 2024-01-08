@@ -27,12 +27,6 @@ class Bottles:
         cls = BottleNumber
     return cls(number)
 
-    if number == 0:
-      cls = BottleNumber0
-    else:
-      cls = BottleNumber
-    return cls(number)
-
 
 class BottleNumber:
   def __init__(self, number):
