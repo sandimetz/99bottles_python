@@ -58,3 +58,8 @@ class BottleNumber0(BottleNumber):
 
   def action(self):
     return 'Go to the store and buy some more'
+
+  def successor(self):
+    if self.number == 0:
+      return 99
+    return self.number - 1
