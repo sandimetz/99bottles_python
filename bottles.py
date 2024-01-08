@@ -64,3 +64,8 @@ class BottleNumber0(BottleNumber):
 class BottleNumber1(BottleNumber):
   def container(self):
     return 'bottle'
+
+  def pronoun(self):
+    if self.number == 1:
+      return 'it'
+    return 'one'
