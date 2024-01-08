@@ -69,4 +69,5 @@ class BottleNumber1(BottleNumber):
 
 
 class BottleNumber6(BottleNumber):
-  pass
+  def container(self):
+    return 'six-pack'
