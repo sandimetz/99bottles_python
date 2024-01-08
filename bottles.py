@@ -51,7 +51,7 @@ class BottleNumber:
     return 'one'
 
   def successor(self):
-    return self.number - 1
+    return BottleNumber.given(self.number - 1)
 
 class BottleNumber0(BottleNumber):
   def quantity(self):
