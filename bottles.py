@@ -49,8 +49,6 @@ class BottleNumber:
     return 'one'
 
   def successor(self):
-    if self._number == 0:
-      return 99
     return self._number - 1
 
 
