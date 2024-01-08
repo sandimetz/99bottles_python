@@ -6,8 +6,9 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
-    bottle_number = BottleNumber(number)
-    next_bottle_number = BottleNumber(bottle_number.successor())
+    bottle_number = BottleNumber0(number) if number == 0 else BottleNumber(number)
+    succ = bottle_number.successor()
+    next_bottle_number = BottleNumber0(succ) if succ == 0 else BottleNumber(succ)
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
