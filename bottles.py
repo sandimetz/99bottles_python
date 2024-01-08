@@ -7,7 +7,7 @@ class Bottles:
 
   def verse(self, number):
     bottle_number = self.bottle_number_given(number)
-    next_bottle_number = BottleNumber(bottle_number.successor())
+    next_bottle_number = self.bottle_number_given(bottle_number.successor())
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
