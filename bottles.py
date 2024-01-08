@@ -23,6 +23,9 @@ class BottleNumber:
   def __init__(self, number):
     self._number = number
 
+  def __str__(self):
+    return f'{self.quantity()} {self.container()}'
+
   def quantity(self):
     if self._number == 0:
       return 'no more'
