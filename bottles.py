@@ -72,5 +72,8 @@ class BottleNumber1(BottleNumber):
 
 
 class BottleNumber6(BottleNumber):
+  def quantity(self):
+    return '1'
+
   def container(self):
     return 'six-pack'
