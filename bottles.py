@@ -69,6 +69,4 @@ class BottleNumber1(BottleNumber):
     return 'bottle'
 
   def pronoun(self):
-    if self._number == 1:
-      return 'it'
-    return 'one'
+    return 'it'
