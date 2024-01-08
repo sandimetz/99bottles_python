@@ -52,7 +52,7 @@ class BottleNumber:
     return 'one'
 
   def successor(self):
-    return self._number - 1
+    return BottleNumber.given(self._number - 1)
 
 
 class BottleNumber0(BottleNumber):
