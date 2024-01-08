@@ -35,8 +35,6 @@ class BottleNumber:
     return str(self.number)
 
   def container(self):
-    if self.number == 1:
-      return 'bottle'
     return 'bottles'
 
   def action(self):
