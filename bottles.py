@@ -19,6 +19,12 @@ class Bottles:
   @staticmethod
   def bottle_number_given(number):
     if number == 0:
+      cls = BottleNumber0
+    else:
+      cls = BottleNumber
+    cls(number)
+
+    if number == 0:
       return BottleNumber0(number)
     return BottleNumber(number)
 
