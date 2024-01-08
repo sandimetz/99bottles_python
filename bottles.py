@@ -25,7 +25,7 @@ class Bottles:
         cls = BottleNumber1
       case _:
         cls = BottleNumber
-    cls(number)
+    return cls(number)
 
     if number == 0:
       cls = BottleNumber0
