@@ -52,6 +52,4 @@ class BottleNumber:
 
 class BottleNumber0(BottleNumber):
   def quantity(self):
-    if self._number == 0:
-      return 'no more'
-    return str(self._number)
+    return 'no more'
