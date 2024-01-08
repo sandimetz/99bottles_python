@@ -16,6 +16,10 @@ class Bottles:
       f'{next_bottle_number} of beer on the wall.\n'
     )
 
+  @staticmethod
+  def bottle_number_given(number):
+    return BottleNumber(number)
+
 
 class BottleNumber:
   def __init__(self, number):
