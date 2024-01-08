@@ -66,3 +66,7 @@ class BottleNumber1(BottleNumber):
 
   def pronoun(self):
     return 'it'
+
+
+class BottleNumber6(BottleNumber):
+  pass
