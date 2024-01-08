@@ -10,11 +10,11 @@ class Bottles:
     next_bottle_number = BottleNumber(bottle_number.successor())
 
     return (
-      f'{bottle_number.quantity().capitalize()} {bottle_number.container()}'
+      f'{bottle_number}'.capitalize() +
         ' of beer on the wall, '
-      f'{bottle_number.quantity()} {bottle_number.container()} of beer.\n'
+      f'{bottle_number} of beer.\n'
       f'{bottle_number.action()}, '
-      f'{next_bottle_number.quantity()} {next_bottle_number.container()}'
+      f'{next_bottle_number}'
         ' of beer on the wall.\n'
     )
 
