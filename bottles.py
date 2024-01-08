@@ -18,18 +18,6 @@ class Bottles:
         ' of beer on the wall.\n'
     )
 
-  def quantity(self, number):
-    return BottleNumber(number).quantity()
-
-  def container(self, number):
-    return BottleNumber(number).container()
-
-  def action(self, number):
-    return BottleNumber(number).action()
-
-  def successor(self, number):
-    return BottleNumber(number).successor()
-
 class BottleNumber:
   def __init__(self, number):
     self.number = number
