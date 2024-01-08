@@ -49,4 +49,7 @@ class BottleNumber:
     return self.number - 1
 
 class BottleNumber0(BottleNumber):
-  pass
+  def quantity(self):
+    if self.number == 0:
+      return 'no more'
+    return str(self.number)
