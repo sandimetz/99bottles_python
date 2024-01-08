@@ -7,7 +7,7 @@ class Bottles:
 
   def verse(self, number):
     bottle_number = BottleNumber.given(number)
-    next_bottle_number = self.bottle_number_given(bottle_number.successor())
+    next_bottle_number = BottleNumber.given(bottle_number.successor())
     # next_bottle_number = bottle_number.successor()
 
     return (
