@@ -6,7 +6,7 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
-    bottle_number = BottleNumber(number)
+    bottle_number = self.bottle_number_given(number)
     next_bottle_number = BottleNumber(bottle_number.successor())
 
     return (
