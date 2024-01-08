@@ -17,17 +17,6 @@ class Bottles:
       f'{next_bottle_number} of beer on the wall.\n'
     )
 
-  @staticmethod
-  def bottle_number_given(number):
-    match number:
-      case 0:
-        cls = BottleNumber0
-      case 1:
-        cls = BottleNumber1
-      case _:
-        cls = BottleNumber
-    return cls(number)
-
 class BottleNumber:
   @staticmethod
   def given(number):
