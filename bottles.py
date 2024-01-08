@@ -21,6 +21,9 @@ class Bottles:
 class BottleNumber:
   @staticmethod
   def given(number):
+    if isinstance(number, BottleNumber):
+      return number
+
     match number:
       case 0:
         cls = BottleNumber0
