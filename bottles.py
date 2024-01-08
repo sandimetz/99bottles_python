@@ -61,3 +61,7 @@ class BottleNumber0(BottleNumber):
 
   def successor(self):
     return 99
+
+
+class BottleNumber1(BottleNumber):
+  pass
