@@ -22,7 +22,7 @@ class Bottles:
       cls = BottleNumber0
     else:
       cls = BottleNumber
-    cls(number)
+    return cls(number)
 
     if number == 0:
       return BottleNumber0(number)
