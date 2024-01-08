@@ -24,6 +24,8 @@ class BottleNumber:
         cls = BottleNumber0
       case 1:
         cls = BottleNumber1
+      case 6:
+        cls = BottleNumber6
       case _:
         cls = BottleNumber
     return cls(number)
