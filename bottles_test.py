@@ -3,6 +3,8 @@ from bottles import Bottles
 
 
 class BottlesTest(unittest.TestCase):
+  maxDiff = None
+
   def test_the_first_verse(self):
     expected = (
       '99 bottles of beer on the wall, '
