@@ -14,14 +14,6 @@ class Bottles:
           'Go to the store and buy some more, '
           '99 bottles of beer on the wall.\n'
         )
-      case 1:
-        return (
-          f'{number} {self.container(number)} of beer on the wall, '
-          f'{number} {self.container(number)} of beer.\n'
-          f'Take {self.pronoun(number)} down and pass it around, '
-          f'{self.quantity(number-1)} {self.container(number-1)}'
-          ' of beer on the wall.\n'
-        )
       case _:
         return (
           f'{number} {self.container(number)} of beer on the wall, '
