@@ -18,10 +18,7 @@ class Bottles:
 
 class BottleNumber:
   def __new__(cls, number):
-    try:
-      cls = globals()[f'BottleNumber{number}']
-    except KeyError:
-      cls = BottleNumber
+    cls = globals().get(f'BottleNumber{number}', BottleNumber)
     return super().__new__(cls)
 
   def __init__(self, number):
