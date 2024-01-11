@@ -18,15 +18,10 @@ class Bottles:
 
 class BottleNumber:
   def __new__(cls, number):
-    match number:
-      case 0:
-        cls = BottleNumber0
-      case 1:
-        cls = BottleNumber1
-      case 6:
-        cls = BottleNumber6
-      case _:
-        cls = BottleNumber
+    try:
+      cls = globals()[f'BottleNumber{number}']
+    except KeyError:
+      cls = BottleNumber
     return super().__new__(cls)
 
   def __init__(self, number):
