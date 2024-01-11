@@ -6,7 +6,7 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
-    bottle_number = BottleNumber.given(number)
+    bottle_number = BottleNumber(number)
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
@@ -17,8 +17,7 @@ class Bottles:
 
 
 class BottleNumber:
-  @staticmethod
-  def given(number):
+  def __new__(cls, number):
     match number:
       case 0:
         cls = BottleNumber0
@@ -28,7 +27,9 @@ class BottleNumber:
         cls = BottleNumber6
       case _:
         cls = BottleNumber
-    return cls(number)
+    obj = super().__new__(cls)
+    obj._number = number
+    return obj
 
   def __init__(self, number):
     self._number = number
@@ -49,7 +50,7 @@ class BottleNumber:
     return 'one'
 
   def successor(self):
-    return BottleNumber.given(self._number - 1)
+    return BottleNumber(self._number - 1)
 
 
 class BottleNumber0(BottleNumber):
@@ -60,7 +61,7 @@ class BottleNumber0(BottleNumber):
     return 'Go to the store and buy some more'
 
   def successor(self):
-    return BottleNumber.given(99)
+    return BottleNumber(99)
 
 
 class BottleNumber1(BottleNumber):
