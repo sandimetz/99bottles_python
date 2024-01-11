@@ -31,9 +31,6 @@ class BottleNumber:
     obj._number = number
     return obj
 
-  def __init__(self, number):
-    self._number = number
-
   def __str__(self):
     return f'{self.quantity()} {self.container()}'
 
