@@ -1,6 +1,3 @@
-from collections import defaultdict
-
-
 class Bottles:
   def song(self):
     return self.verses(99, 0)
@@ -21,13 +18,12 @@ class Bottles:
 
 class BottleNumber:
   def __new__(cls, number):
-    class_names = defaultdict(lambda: BottleNumber)
-    class_names.update({
+    class_names = {
       0: BottleNumber0,
       1: BottleNumber1,
       6: BottleNumber6
-      })
-    cls = class_names[number]
+    }
+    cls = class_names.get(number, BottleNumber)
     return super().__new__(cls)
 
   def __init__(self, number):
