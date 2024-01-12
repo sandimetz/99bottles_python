@@ -18,13 +18,14 @@ class Bottles:
 
 class BottleNumber:
   def __new__(cls, number):
-    class_names = {
-      0: BottleNumber0,
-      1: BottleNumber1,
-      6: BottleNumber6
-    }
-    cls = class_names.get(number, BottleNumber)
-    return super().__new__(cls)
+    candidates = [BottleNumber6, BottleNumber1, BottleNumber0, BottleNumber]
+    for candidate in candidates:
+      if candidate.handles(number):
+        return super().__new__(candidate)
+
+  @staticmethod
+  def handles(number):
+    return True
 
   def __init__(self, number):
     self._number = number
@@ -49,6 +50,10 @@ class BottleNumber:
 
 
 class BottleNumber0(BottleNumber):
+  @staticmethod
+  def handles(number):
+    return number == 0
+
   def quantity(self):
     return 'no more'
 
@@ -60,6 +65,10 @@ class BottleNumber0(BottleNumber):
 
 
 class BottleNumber1(BottleNumber):
+  @staticmethod
+  def handles(number):
+    return number == 1
+
   def container(self):
     return 'bottle'
 
@@ -68,6 +77,10 @@ class BottleNumber1(BottleNumber):
 
 
 class BottleNumber6(BottleNumber):
+  @staticmethod
+  def handles(number):
+    return number == 6
+
   def quantity(self):
     return '1'
 
