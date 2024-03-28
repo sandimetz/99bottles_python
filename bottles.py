@@ -17,20 +17,15 @@ class Bottles:
 
 
 class BottleNumber:
-  _registry = []
+  _registry = {}
 
   def __new__(cls, number):
-    for candidate in cls._registry:
-      if candidate.handles(number):
-        return super().__new__(candidate)
+    cls = BottleNumber._registry.get(number, BottleNumber)
+    return super().__new__(cls)
 
   @classmethod
-  def register(cls, candidate):
-    cls._registry.insert(0, candidate)
-
-  @staticmethod
-  def handles(number):
-    return True
+  def __init_subclass__(cls, **kwargs):
+    BottleNumber._registry[cls._HANDLES] = cls
 
   def __init__(self, number):
     self._number = number
@@ -53,13 +48,9 @@ class BottleNumber:
   def successor(self):
     return BottleNumber(self._number - 1)
 
-BottleNumber.register(BottleNumber)
-
 
 class BottleNumber0(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 0
+  _HANDLES = 0
 
   def quantity(self):
     return 'no more'
@@ -70,13 +61,9 @@ class BottleNumber0(BottleNumber):
   def successor(self):
     return BottleNumber(99)
 
-BottleNumber.register(BottleNumber0)
-
 
 class BottleNumber1(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 1
+  _HANDLES = 1
 
   def container(self):
     return 'bottle'
@@ -84,18 +71,12 @@ class BottleNumber1(BottleNumber):
   def pronoun(self):
     return 'it'
 
-BottleNumber.register(BottleNumber1)
-
 
 class BottleNumber6(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 6
+  _HANDLES = 6
 
   def quantity(self):
     return '1'
 
   def container(self):
     return 'six-pack'
-
-BottleNumber.register(BottleNumber6)
