@@ -17,11 +17,16 @@ class Bottles:
 
 
 class BottleNumber:
+  _registry = []
+
   def __new__(cls, number):
-    candidates = [BottleNumber6, BottleNumber1, BottleNumber0, BottleNumber]
-    for candidate in candidates:
+    for candidate in cls._registry:
       if candidate.handles(number):
         return super().__new__(candidate)
+
+  @classmethod
+  def register(cls, candidate):
+    cls._registry.insert(0, candidate)
 
   @staticmethod
   def handles(number):
@@ -48,6 +53,8 @@ class BottleNumber:
   def successor(self):
     return BottleNumber(self._number - 1)
 
+BottleNumber.register(BottleNumber)
+
 
 class BottleNumber0(BottleNumber):
   @staticmethod
@@ -63,6 +70,8 @@ class BottleNumber0(BottleNumber):
   def successor(self):
     return BottleNumber(99)
 
+BottleNumber.register(BottleNumber0)
+
 
 class BottleNumber1(BottleNumber):
   @staticmethod
@@ -75,6 +84,8 @@ class BottleNumber1(BottleNumber):
   def pronoun(self):
     return 'it'
 
+BottleNumber.register(BottleNumber1)
+
 
 class BottleNumber6(BottleNumber):
   @staticmethod
@@ -86,3 +97,5 @@ class BottleNumber6(BottleNumber):
 
   def container(self):
     return 'six-pack'
+
+BottleNumber.register(BottleNumber6)
