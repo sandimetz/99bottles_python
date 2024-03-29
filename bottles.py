@@ -22,8 +22,8 @@ class BottleVerse:
   def __init__(self, number):
     self._number = number
 
-  def verse(self, number):
-    bottle_number = BottleNumber(number)
+  def lyrics(self):
+    bottle_number = BottleNumber(self._number)
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
