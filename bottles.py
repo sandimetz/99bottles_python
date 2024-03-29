@@ -17,7 +17,8 @@ class Bottles:
 
 
 class BottleVerse:
-  pass
+  def __init__(self, number):
+    self._number = number
 
 
 class BottleNumber:
