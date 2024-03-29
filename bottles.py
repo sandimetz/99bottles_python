@@ -8,15 +8,6 @@ class Bottles:
   def verse(self, number):
     return BottleVerse(number).lyrics()
 
-    bottle_number = BottleNumber(number)
-
-    return (
-      f'{bottle_number} of beer on the wall, '.capitalize() +
-      f'{bottle_number} of beer.\n'
-      f'{bottle_number.action()}, '
-      f'{bottle_number.successor()} of beer on the wall.\n'
-    )
-
 
 class BottleVerse:
   def __init__(self, number):
