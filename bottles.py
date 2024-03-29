@@ -17,26 +17,17 @@ class Bottles:
 
 
 class BottleNumber:
-  _registry = []
-
   def __new__(cls, number):
-    for candidate in cls._registry:
-      if candidate.handles(number):
-        return super().__new__(candidate)
-
-  @classmethod
-  def register(cls, candidate):
-    cls._registry.insert(0, candidate)
-
-  @classmethod
-  def __init_subclass__(cls, **kwargs):
-    if not BottleNumber._registry:
-      BottleNumber.register(BottleNumber)
-    BottleNumber.register(cls)
-
-  @staticmethod
-  def handles(number):
-    return True
+    match number:
+      case 0:
+        cls = BottleNumber0
+      case 1:
+        cls = BottleNumber1
+      case 6:
+        cls = BottleNumber6
+      case _:
+        cls = BottleNumber
+    return super().__new__(cls)
 
   def __init__(self, number):
     self._number = number
@@ -61,10 +52,6 @@ class BottleNumber:
 
 
 class BottleNumber0(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 0
-
   def quantity(self):
     return 'no more'
 
@@ -76,10 +63,6 @@ class BottleNumber0(BottleNumber):
 
 
 class BottleNumber1(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 1
-
   def container(self):
     return 'bottle'
 
@@ -88,10 +71,6 @@ class BottleNumber1(BottleNumber):
 
 
 class BottleNumber6(BottleNumber):
-  @staticmethod
-  def handles(number):
-    return number == 6
-
   def quantity(self):
     return '1'
 
