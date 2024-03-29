@@ -20,6 +20,16 @@ class BottleVerse:
   def __init__(self, number):
     self._number = number
 
+  def verse(self, number):
+    bottle_number = BottleNumber(number)
+
+    return (
+      f'{bottle_number} of beer on the wall, '.capitalize() +
+      f'{bottle_number} of beer.\n'
+      f'{bottle_number.action()}, '
+      f'{bottle_number.successor()} of beer on the wall.\n'
+    )
+
 
 class BottleNumber:
   def __new__(cls, number):
