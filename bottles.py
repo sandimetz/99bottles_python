@@ -16,6 +16,10 @@ class Bottles:
     )
 
 
+class BottleVerse:
+  pass
+
+
 class BottleNumber:
   def __new__(cls, number):
     match number:
