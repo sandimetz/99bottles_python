@@ -6,6 +6,7 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
+    # return self._verse_template(number).lyrics()
     return BottleVerse(number).lyrics()
 
 
