@@ -1,6 +1,7 @@
 class BottleVerse:
   @classmethod
   def lyrics(cls, number):
+    # return cls(BottleNumber(number))._lyrics()
     return cls(number)._lyrics()
 
   def __init__(self, number):
