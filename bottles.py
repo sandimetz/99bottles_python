@@ -3,8 +3,10 @@ class BottleVerse:
   def lyrics(cls, number):
     return cls(BottleNumber(number))._lyrics()
 
+  def __init__(self, bottle_number):
+    self._bottle_number = bottle_number
+
   def __init__(self, number):
-    self._number = number
     self._bottle_number = number
 
   def _lyrics(self):
