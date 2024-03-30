@@ -2,7 +2,7 @@ class BottleVerse:
   def __init__(self, number):
     self._number = number
 
-  def lyrics(self):
+  def _lyrics(self):
     bottle_number = BottleNumber(self._number)
 
     return (
@@ -25,7 +25,7 @@ class Bottles:
 
   def verse(self, number):
     # return self._verse_template.lyrics(number)
-    return self._verse_template(number).lyrics()
+    return self._verse_template(number)._lyrics()
 
 
 class BottleNumber:
