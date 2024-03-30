@@ -6,9 +6,6 @@ class BottleVerse:
   def __init__(self, bottle_number):
     self._bottle_number = bottle_number
 
-  def __init__(self, number):
-    self._bottle_number = number
-
   def _lyrics(self):
     return (
       f'{self._bottle_number} of beer on the wall, '.capitalize() +
