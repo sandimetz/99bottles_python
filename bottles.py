@@ -5,6 +5,7 @@ class BottleVerse:
 
   def __init__(self, number):
     self._number = number
+    self._bottle_number = number
 
   def _lyrics(self):
     bottle_number = self._number
