@@ -14,6 +14,9 @@ class BottleVerse:
 
 
 class Bottles:
+  def __init__(self, verse_template=BottleVerse):
+    self._verse_template = verse_template
+
   def song(self):
     return self.verses(99, 0)
 
