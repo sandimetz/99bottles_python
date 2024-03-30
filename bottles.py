@@ -1,7 +1,4 @@
 class Bottles:
-  def __init__(self, verse_template=BottleVerse):
-    self._verse_template = verse_template
-
   def song(self):
     return self.verses(99, 0)
 
@@ -26,7 +23,6 @@ class BottleVerse:
       f'{bottle_number.action()}, '
       f'{bottle_number.successor()} of beer on the wall.\n'
     )
-
 
 class BottleNumber:
   def __new__(cls, number):
