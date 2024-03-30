@@ -11,10 +11,10 @@ class BottleVerse:
     bottle_number = self._number
 
     return (
-      f'{bottle_number} of beer on the wall, '.capitalize() +
-      f'{bottle_number} of beer.\n'
-      f'{bottle_number.action()}, '
-      f'{bottle_number.successor()} of beer on the wall.\n'
+      f'{self._bottle_number} of beer on the wall, '.capitalize() +
+      f'{self._bottle_number} of beer.\n'
+      f'{self._bottle_number.action()}, '
+      f'{self._bottle_number.successor()} of beer on the wall.\n'
     )
 
 
