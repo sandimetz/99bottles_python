@@ -7,8 +7,7 @@ class BottleVerse:
     self._number = number
 
   def _lyrics(self):
-    bottle_number = (self._number if isinstance(self._number, BottleNumber)
-                     else BottleNumber(self._number))
+    bottle_number = self._number
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
