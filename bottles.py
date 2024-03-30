@@ -8,8 +8,6 @@ class BottleVerse:
     self._bottle_number = number
 
   def _lyrics(self):
-    bottle_number = self._number
-
     return (
       f'{self._bottle_number} of beer on the wall, '.capitalize() +
       f'{self._bottle_number} of beer.\n'
