@@ -80,6 +80,11 @@ class VerseFake:
     return f'This is verse {number}.\n'
 
 
+class TestVerseFake:
+  def test_plays_verse_role(self):
+    assert responds_to_lyrics(VerseFake)
+
+
 class TestCountdownSong:
   def test_verse(self):
     expected = 'This is verse 500.\n'
