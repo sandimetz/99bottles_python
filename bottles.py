@@ -22,7 +22,7 @@ class CountdownSong:
     self._verse_template = verse_template
 
   def song(self):
-    return self.verses(99, 0)
+    return self.verses(self._max, self._min)
 
   def verses(self, upper, lower):
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
