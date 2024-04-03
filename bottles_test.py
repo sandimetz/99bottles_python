@@ -7,6 +7,9 @@ def responds_to_lyrics(role_player):
 
 
 class TestBottleVerse:
+  def test_plays_verse_role(self):
+    assert responds_to_lyrics(BottleVerse)
+
   def test_verse_general_rule_upper_bound(self):
     expected = (
       '99 bottles of beer on the wall, '
