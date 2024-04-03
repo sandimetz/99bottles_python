@@ -74,7 +74,14 @@ class VerseFake:
 
 class TestCountdownSong:
   def test_a_couple_verses(self):
-    pass
+    expected = (
+      'This is verse 99.\n'
+      '\n'
+      'This is verse 98.\n'
+      '\n'
+      'This is verse 97.\n'
+    )
+    assert CountdownSong(verse_template=VerseFake).verses(99, 97) == expected
 
   def test_a_couple_verses(self):
     expected = (
