@@ -1,5 +1,5 @@
 import pytest
-from bottles import Bottles, BottleVerse
+from bottles import CountdownSong, BottleVerse
 
 
 class TestBottleVerse:
@@ -80,7 +80,7 @@ class TestCountdownSong:
       'Take one down and pass it around, '
       '97 bottles of beer on the wall.\n'
     )
-    assert Bottles().verses(99, 98) == expected
+    assert CountdownSong().verses(99, 98) == expected
 
   def test_a_few_verses(self):
     expected = (
@@ -99,7 +99,7 @@ class TestCountdownSong:
       'Go to the store and buy some more, '
       '99 bottles of beer on the wall.\n'
     )
-    assert Bottles().verses(2, 0) == expected
+    assert CountdownSong().verses(2, 0) == expected
 
   def test_the_whole_song(self):
     expected = """99 bottles of beer on the wall, 99 bottles of beer.
@@ -402,4 +402,4 @@ Take it down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 """
-    assert Bottles().song() == expected
+    assert CountdownSong().song() == expected
