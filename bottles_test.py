@@ -67,7 +67,7 @@ class TestBottleVerse:
     assert BottleVerse.lyrics(0) == expected
 
 
-class TestBottles:
+class TestCountdownSong:
   def test_a_couple_verses(self):
     expected = (
       '99 bottles of beer on the wall, '
