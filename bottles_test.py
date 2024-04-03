@@ -88,6 +88,20 @@ class TestCountdownSong:
     assert CountdownSong(verse_template=VerseFake).verses(99, 97) == expected
 
   def test_the_whole_song(self):
+    expected = (
+      'This is verse 47.\n'
+      '\n'
+      'This is verse 46.\n'
+      '\n'
+      'This is verse 45.\n'
+      '\n'
+      'This is verse 44.\n'
+      '\n'
+      'This is verse 43.\n'
+    )
+    assert CountdownSong(verse_template=VerseFake).verses(47, 43) == expected
+
+  def test_the_whole_song(self):
     expected = """99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 
