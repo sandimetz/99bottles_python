@@ -1,7 +1,6 @@
 import pytest
 from bottles import CountdownSong, BottleVerse
 
-
 class TestBottleVerse:
   def test_verse_general_rule_upper_bound(self):
     expected = (
@@ -65,6 +64,12 @@ class TestBottleVerse:
       '99 bottles of beer on the wall.\n'
     )
     assert BottleVerse.lyrics(0) == expected
+
+
+class VerseFake:
+  @staticmethod
+  def lyrics(number):
+    return f'This is verse {number}.\n'
 
 
 class TestCountdownSong:
