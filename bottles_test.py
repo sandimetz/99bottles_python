@@ -74,6 +74,9 @@ class VerseFake:
 
 class TestCountdownSong:
   def test_a_couple_verses(self):
+    pass
+
+  def test_a_couple_verses(self):
     expected = (
       '99 bottles of beer on the wall, '
       '99 bottles of beer.\n'
