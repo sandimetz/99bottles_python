@@ -1,5 +1,5 @@
 import pytest
-from bottles import Bottles
+from bottles import Bottles, BottleVerse
 
 
 class TestBottleVerse:
@@ -10,7 +10,7 @@ class TestBottleVerse:
       'Take one down and pass it around, '
       '98 bottles of beer on the wall.\n'
     )
-    assert Bottles().verse(99) == expected
+    assert BottleVerse.lyrics(99) == expected
 
 
 class TestBottles:
