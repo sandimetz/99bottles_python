@@ -77,7 +77,7 @@ class TestCountdownSong:
     expected = 'This is verse 500.\n'
     assert CountdownSong(verse_template=VerseFake).verse(500) == expected
 
-  def test_a_couple_verses(self):
+  def test_verses(self):
     expected = (
       'This is verse 99.\n'
       '\n'
