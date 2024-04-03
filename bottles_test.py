@@ -389,3 +389,17 @@ No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 """
     assert CountdownSong().song() == expected
+
+  def test_the_whole_song(self):
+    expected = (
+      'This is verse 47.\n'
+      '\n'
+      'This is verse 46.\n'
+      '\n'
+      'This is verse 45.\n'
+      '\n'
+      'This is verse 44.\n'
+      '\n'
+      'This is verse 43.\n'
+    )
+    assert CountdownSong(verse_template=VerseFake, max=47, min=43).song() == expected
