@@ -2,6 +2,10 @@ import pytest
 from bottles import Bottles
 
 
+class TestBottleVerse:
+  pass
+
+
 class TestBottles:
   def test_the_first_verse(self):
     expected = (
