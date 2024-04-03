@@ -1,6 +1,11 @@
 import pytest
 from bottles import CountdownSong, BottleVerse
 
+
+def responds_to_lyrics(role_player):
+  return hasattr(role_player, 'lyrics') and callable(role_player.lyrics)
+
+
 class TestBottleVerse:
   def test_verse_general_rule_upper_bound(self):
     expected = (
