@@ -21,6 +21,24 @@ class TestBottleVerse:
     )
     assert BottleVerse.lyrics(3) == expected
 
+  def test_verse_7(self):
+    expected = (
+      '7 bottles of beer on the wall, '
+      '7 bottles of beer.\n'
+      'Take one down and pass it around, '
+      '1 six-pack of beer on the wall.\n'
+    )
+    assert BottleVerse.lyrics(7) == expected
+
+  def test_verse_6(self):
+    expected = (
+      '1 six-pack of beer on the wall, '
+      '1 six-pack of beer.\n'
+      'Take one down and pass it around, '
+      '5 bottles of beer on the wall.\n'
+    )
+    assert BottleVerse.lyrics(6) == expected
+
   def test_verse_2(self):
     expected = (
       '2 bottles of beer on the wall, '
