@@ -17,6 +17,8 @@ class BottleVerse:
 
 class CountdownSong:
   def __init__(self, verse_template=BottleVerse, max=99, min=0):
+    self._max = max
+    self._min = min
     self._verse_template = verse_template
 
   def song(self):
