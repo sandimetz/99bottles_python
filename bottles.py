@@ -68,7 +68,7 @@ class BottleNumber0(BottleNumber):
     return 'Go to the store and buy some more'
 
   def successor(self):
-    return BottleNumber.given(99)
+    return BottleNumber(99)
 
 
 class BottleNumber1(BottleNumber):
