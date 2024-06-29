@@ -28,6 +28,9 @@ class BottleNumber:
         cls = BottleNumber
     return cls(number)
 
+  def __new__(cls, number):
+    return super().__new__(cls)
+
   def __init__(self, number):
     self._number = number
 
