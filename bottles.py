@@ -29,6 +29,13 @@ class BottleNumber:
     return cls(number)
 
   def __new__(cls, number):
+    match number:
+      case 0:
+        cls = BottleNumber0
+      case 1:
+        cls = BottleNumber1
+      case _:
+        cls = BottleNumber
     return super().__new__(cls)
 
   def __init__(self, number):
