@@ -6,7 +6,7 @@ class Bottles:
     return '\n'.join(self.verse(i) for i in reversed(range(lower, upper + 1)))
 
   def verse(self, number):
-    bottle_number = BottleNumber.given(number)
+    bottle_number = BottleNumber(number)
 
     return (
       f'{bottle_number} of beer on the wall, '.capitalize() +
